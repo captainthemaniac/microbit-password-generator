@@ -1,9 +1,15 @@
+// If logo is long pressed, the number of length will be reset to 8 again.
+input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
+    nooflength = 8
+})
+// On button A pressed, it will add 1, gradually everytime you do so.
 input.onButtonPressed(Button.A, function () {
     nooflength += 1
 })
 input.onGesture(Gesture.FreeFall, function () {
     basic.showString("DEBUG MODE! SIKE!")
 })
+// On button B pressed, it will generate the password out. You could add more queries in according to your favor.
 input.onButtonPressed(Button.B, function () {
     for (let index = 0; index < nooflength; index++) {
         letter = randint(0, 87)
@@ -192,6 +198,7 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
     control.reset()
 })
+// I start the generator at 8 letters, as this length is the least most websites asked for.
 let letter = 0
 let nooflength = 0
 nooflength = 8
