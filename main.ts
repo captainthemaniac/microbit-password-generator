@@ -6,6 +6,7 @@ input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
 input.onButtonPressed(Button.A, function () {
     nooflength += 1
 })
+// Easter egg, did absolutely nothing ;)
 input.onGesture(Gesture.FreeFall, function () {
     basic.showString("DEBUG MODE! SIKE!")
 })
@@ -194,9 +195,6 @@ input.onButtonPressed(Button.B, function () {
         }
         basic.pause(1000)
     }
-})
-input.onGesture(Gesture.Shake, function () {
-    control.reset()
 })
 // I start the generator at 8 letters, as this length is the least most websites asked for.
 let letter = 0
